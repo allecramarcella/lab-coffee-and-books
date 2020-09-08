@@ -1,0 +1,34 @@
+<h2>Add place</h2>
+
+<form action="/places" method="post">
+
+  <label for="name-input">Name:</label>
+  <input type="text" name="name" id="name-input" />
+
+  <label for="type-input">Type:</label>
+  <select name="type" id="type-input" >
+      <option value="Coffee shop">Coffee shop</option>
+      <option value="Bookstore">Bookstore</option>
+
+  </select>
+
+  <button type="submit">Create</button>
+
+</form>
+
+<br><br>
+<h2>List of places</h2>
+<hr>
+{{#each placeDocs }}
+    <br>
+    <p>Name: {{name}}</p>
+    <p>Type of place: {{type}}</p>
+
+    <form action="/places/{{_id}}/edit" method="GET">
+        <button>Edit place</button>
+    </form>
+    <br>
+    <form action="/places/{{id}}/delete" method="post">
+        <button type="submit">Delete place</button>
+    </form>
+{{/each}}
