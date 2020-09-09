@@ -3,6 +3,17 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
-a {
+a, h2 {
   color: #00B7FF;
+}
+
+
+
+span {
+  font-weight: 600;
+}
+
+hr {
+  background-color: teal;
+
 }

@@ -7,6 +7,7 @@
 
   <label for="type-input">Type:</label>
   <select name="type" id="type-input" >
+      <option value="">--- choose type ---</option>
       <option value="Coffee shop">Coffee shop</option>
       <option value="Bookstore">Bookstore</option>
 
@@ -19,10 +20,13 @@
 <br><br>
 <h2>List of places</h2>
 <hr>
+<hr>
 {{#each placeDocs }}
     <br>
-    <p>Name: {{name}}</p>
-    <p>Type of place: {{type}}</p>
+    <p> <span>Name: </span> {{name}}</p>
+    <p> <span>Type of place: </span> {{type}}</p>
+    <p><span>Created at: </span> {{createdAt}}</p>
+    <p><span>Last updated at: </span> {{updatedAt}}</p>
 
     <form action="/places/{{_id}}/edit" method="GET">
         <button>Edit place</button>
@@ -31,4 +35,6 @@
     <form action="/places/{{id}}/delete" method="post">
         <button type="submit">Delete place</button>
     </form>
+    <br>
+    <hr>
 {{/each}}

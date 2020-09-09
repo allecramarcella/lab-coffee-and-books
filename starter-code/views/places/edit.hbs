@@ -2,17 +2,19 @@
 
 <form action="/places/{{_id}}" method="POST">
   <label for="name">Name:</label>
-  <input type="text" name="name" placeholder="{{name}}">
+  <input type="text" name="name" value="{{name}}">
 
 
   <label for="type-input">Type:</label>
   <select name="type" id="type-input" >
-      <option value="{{type}}" >Current value: {{type}}</option>
+      <option value="{{type}}"  hidden='hidden'>Curren value: {{type}} ----  </option>
       <option value="Coffee store">Coffee store</option>
       <option value="Bookstore">Bookstore</option>
   </select>
 
-  <button type="submit">Edit place</button>
+  <button type="submit" >Edit place</button>
 </form>
 <br>
 <a href="/places">[BACK TO HOME]</a>
+
+

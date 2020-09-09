@@ -9,8 +9,8 @@ const mongoose     = require('mongoose');
 const logger       = require('morgan');
 const path         = require('path');
 
-const handlebars = require('handlebars');
-// handlebars.registerHelper('moment', require('helper-moment'));
+
+
 
 mongoose
   .connect('mongodb://localhost/places-app', {useNewUrlParser: true})
@@ -61,3 +61,4 @@ app.use('/places', places)
 
 
 module.exports = app;
+
